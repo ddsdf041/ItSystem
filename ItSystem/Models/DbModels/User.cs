@@ -11,13 +11,13 @@ public partial class User
 
     public string LastName { get; set; } = null!;
 
-    public string MiddleName { get; set; } = null!;
+    public string? MiddleName { get; set; }
 
     public string ShortName { get; set; } = null!;
 
-    public Guid? IdPost { get; set; }
+    public Guid? IdPost { get; set; } = null!;
 
-    public DateTime LastOnline { get; set; }
+    public DateTime? LastOnline { get; set; } = null!;
 
     public string Login { get; set; } = null!;
 
@@ -27,7 +27,7 @@ public partial class User
 
     public bool HasAccess { get; set; }
 
-    public Guid Role { get; set; }
+    public int Role { get; set; }
 
     public virtual ICollection<Chat> ChatIdUser1Navigations { get; set; } = new List<Chat>();
 
