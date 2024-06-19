@@ -115,11 +115,11 @@ public partial class ItSystemContext : DbContext
         {
             entity.ToTable("Message");
 
-            entity.HasIndex(e => e.IdBranchMessage, "IX_Message").IsUnique();
+            entity.HasIndex(e => e.IdBranchMessage, "IX_Message");
 
-            entity.HasIndex(e => e.IdChannel, "IX_Message_1").IsUnique();
+            entity.HasIndex(e => e.IdChannel, "IX_Message_1");
 
-            entity.HasIndex(e => e.IdChat, "IX_Message_2").IsUnique();
+            entity.HasIndex(e => e.IdChat, "IX_Message_2");
 
             entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.DateCreate).HasColumnType("datetime");

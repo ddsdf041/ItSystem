@@ -1,0 +1,79 @@
+﻿@model ItSystem.Controllers.BoardsController.BoardViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div class="mt-3 d-flex justify-content-center">
+    @foreach (var item in EnumHelper.GetStatuses<StatusEnum>())
+{
+
+
+        <div style="width: 300px; background-color: #DCDCDC;"
+             class="p-3 shadow-sm">
+            <div class="text-center m-2">
+                <h6>
+                    @switch (item)
+                    {
+                        case StatusEnum.BACKLOG:
+                            <p >
+                                Бэклог
+                            </p>
+                            break;
+                        case StatusEnum.IN_PLAN:
+                            <p >
+                                План
+                            </p>
+                            break;
+                        case StatusEnum.FOR_WORK:
+                            <p >
+                                В работу
+                            </p>
+                            break;
+                        case StatusEnum.IN_WORK:
+                            <p>
+                                В работе
+                            </p>
+                            break;
+                        case StatusEnum.WAIT_TEST:
+                            <p>
+                                Можно тестировать
+                            </p>
+                            break;
+                        case StatusEnum.IN_TEST:
+                            <p>
+                                Тестируется
+                            </p>
+                            break;
+                        case StatusEnum.READY:
+                            <p>
+                                Решена
+                            </p>
+                            break;
+
+                    }
+                  </h6>
+            </div>
+
+        @if (Model.Tasks.Count == 0)
+        {
+            <div class="text-center m-2 text-black-50">
+                Нет задач
+            </div>
+        }
+
+        @foreach (var task in Model.Tasks.Where(x => x.Status == (int)item))
+        {
+            <a href="@Url.Action("Details", "Tasks", new { id = task.Id})"
+               style="text-decoration: none;">
+                <div class="alert alert-light shadow-sm"
+                         style="font-size: 10pt;">
+                    <p> <b> @task.ShortName</b> <br /> <div class="m-0 text-black"> @task.Name</div></p>
+
+                    <p class="text-black">@task.IdExecutorNavigation.ShortName</p>
+
+                </div>
+            </a>
+        }
+    </div>
+}
+</div>

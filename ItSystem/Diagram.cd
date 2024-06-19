@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ItSystem.Controllers.BoardsController">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="ItSystem.Controllers.BoardsController.BoardViewModel">
+        <TypeIdentifier>
+          <NewMemberFileName>Controllers\BoardsController.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAABBACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\BoardsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItSystem.Controllers.ChannelsController">
+    <Position X="4.5" Y="3.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="ItSystem.Controllers.ChannelsController.ChannelContentViewModel">
+        <TypeIdentifier>
+          <NewMemberFileName>Controllers\ChannelsController.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAABBACAgAAAAAAAAAEAAEACAAEAAAAgAAA=</HashCode>
+      <FileName>Controllers\ChannelsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItSystem.Controllers.HomeController">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAIAAAAQAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItSystem.Controllers.PostsController">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABBACAAAAAAAAAAAMAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\PostsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItSystem.Controllers.ProjectsController">
+    <Position X="2.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABBACAAAAAAAAAAAEgAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\ProjectsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItSystem.Controllers.TasksController">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="ItSystem.Controllers.TasksController.TaskViewModel">
+        <TypeIdentifier>
+          <NewMemberFileName>Controllers\TasksController.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAABBACAAAAAAAAAAAUAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\TasksController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItSystem.Controllers.UsersController">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABBQCAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\UsersController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItSystem.Models.EnumHelper">
+    <Position X="10.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\EnumHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItSystem.Models.DbModels.Board" Collapsed="true">
+    <Position X="6.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAEAQAAQAEAIAAAAAIAAAAAAA=</HashCode>
+      <FileName>Models\DbModels\Board.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItSystem.Models.DbModels.Channel" Collapsed="true">
+    <Position X="8.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAAFAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Models\DbModels\Channel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItSystem.Models.DbModels.Chat" Collapsed="true">
+    <Position X="10.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEACAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAIAYAAAA=</HashCode>
+      <FileName>Models\DbModels\Chat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItSystem.Models.DbModels.File" Collapsed="true">
+    <Position X="12" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAACAAQQAAAAQAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Models\DbModels\File.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItSystem.Models.DbModels.ItSystemContext" Collapsed="true">
+    <Position X="6.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAQAQAAABBAAAAAAAEAAAAAAAAAAIASAAEYA=</HashCode>
+      <FileName>Models\DbModels\ItSystemContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItSystem.Models.DbModels.Message" Collapsed="true">
+    <Position X="8.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACCBAICAIIAACAAAAAUAAGAACEAAAAAAAAKQAAAAA=</HashCode>
+      <FileName>Models\DbModels\Message.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItSystem.Models.DbModels.Post" Collapsed="true">
+    <Position X="10.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACACAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Models\DbModels\Post.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItSystem.Models.DbModels.Project" Collapsed="true">
+    <Position X="12" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAQAAAAEAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Models\DbModels\Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItSystem.Models.DbModels.Task" Collapsed="true">
+    <Position X="6.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAAAgIAAkAAAAAgQSAACEAIAAAAAAAQAQAQA=</HashCode>
+      <FileName>Models\DbModels\Task.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItSystem.Models.DbModels.User" Collapsed="true">
+    <Position X="8.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAKAEAAAAAAQAAAEAAQAAAAACAGAIBKAAASAQAAAAg=</HashCode>
+      <FileName>Models\DbModels\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ItSystem.Models.RoleEnum">
+    <Position X="10.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\RoleEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ItSystem.Models.StatusEnum">
+    <Position X="12.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQCAAAAAAAAAAAARAAACAAAAAAAAAgBAA=</HashCode>
+      <FileName>Models\Status.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

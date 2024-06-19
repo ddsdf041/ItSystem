@@ -2,25 +2,40 @@
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 
-<ul class="navbar-nav">
+<div class="dropdown pb-4 mt-auto">
 @if (SignInManager.IsSignedIn(User))
 {
-    <li class="nav-item">
-        <a  class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
-    </li>
-    <li class="nav-item">
-        <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-            <button  type="submit" class="nav-link btn btn-link text-dark">Logout</button>
-        </form>
-    </li>
+   
+        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+           id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://sxprotection.com.au/wp-content/uploads/2016/07/team-placeholder.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+            <span class="d-none d-sm-inline mx-1">@User.Identity?.Name</span>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+            <li><a class="dropdown-item" asp-area="Identity" asp-page="/Account/Manage/Index">Профиль</a></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li>
+                 <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <button type="submit" class="dropdown-item">Выйти</button>
+                </form>
+            </li>
+        </ul>
+
+
 }
 else
 {
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
-    </li>
+        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+           id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="d-none d-sm-inline mx-1">Войти</span>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+            <li><a class="dropdown-item" asp-area="Identity" asp-page="/Account/Login">Войти</a></li>
+            <li><a class="dropdown-item" asp-area="Identity" asp-page="/Account/Register">Регистрация</a></li>
+        </ul>
 }
-</ul>
+</div>
+
+

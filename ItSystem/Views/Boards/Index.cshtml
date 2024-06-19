@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ItSystem.Models.DbModels.Board>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Доски (все)</h1>
+
+<p>
+    <a asp-action="Create">Создать доску</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Наименование
+            </th>
+            <th>
+                Описание
+            </th>
+            <th>
+                Относится к проекту
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Name) @Html.DisplayFor(modelItem => item.ShortName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdProjectNavigation.Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

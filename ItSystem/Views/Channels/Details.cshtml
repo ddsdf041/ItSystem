@@ -1,0 +1,64 @@
+﻿@model ItSystem.Controllers.ChannelsController.ChannelContentViewModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+<style>
+    .messages {
+        overflow-y: scroll;
+        height: calc(100vh - 360px);
+    }
+    .sendmessages {
+        position: absolute;
+        bottom: 0;
+        height: 300px;
+        width: 80%;
+    }
+</style>
+
+    <h5 class="p-2">Обсуждение в канале "@Model.Name"</h5>
+<hr />
+        <div class="p-2 messages">
+
+       
+
+            @foreach (var item in Model.Messages)
+            {
+                <div class="mt-4 ms-4">
+                    <a>
+                <img src="https://sxprotection.com.au/wp-content/uploads/2016/07/team-placeholder.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+
+                <span class="d-none d-sm-inline mx-1 text-black-50">@item.IdUserNavigation.ShortName (@item.DateCreate.ToLocalTime())</span>
+              
+                     <br />
+                    <a class="text-black"
+                       style="text-decoration: none;">
+                        @item.Text
+                    </a>
+                    </a>
+          
+                    
+                </div>
+            }
+
+            @if (Model.Messages.Count == 0)
+            {
+                <p>Сообщений пока нет</p>
+            }
+
+
+        </div>
+    @using (Html.BeginForm("SendComment", "Channels", FormMethod.Post))
+    {
+    @Html.HiddenFor(x => x.Id)
+        <div class="sendmessages ms-4">
+     
+            <div class="form-group">
+                <div>
+                    <textarea type="text" class="form-control form-a" name="Comment" required></textarea>
+                </div>
+            </div>
+   
+            <button type="submit" class="btn btn-outline-secondary mt-3">Отправить</button>
+        </div>
+    }

@@ -19,7 +19,7 @@ public partial class Task
 
     public Guid IdAuthor { get; set; }
 
-    public Guid IsDelete { get; set; }
+    public bool IsDelete { get; set; }
 
     public Guid IdBoard { get; set; }
 
